@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+      <!-- Login Page -->
+      <div id="login-container" class="auth-container active">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+                <div class="error-message" id="login-email-error">Please enter a valid email</div>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+                <div class="error-message" id="login-password-error">Password is required</div>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+            <div class="auth-switch">
+                Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Signup Page -->
+    <div id="signup-container" class="auth-container">
+        <h2>Create Account</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" required>
+                <div class="error-message" id="signup-name-error">Please enter your full name</div>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required>
+                <div class="error-message" id="signup-email-error">Please enter a valid email</div>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+                <div class="error-message" id="signup-password-error">Password must be at least 8 characters</div>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required>
+                <div class="error-message" id="confirm-password-error">Passwords do not match</div>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="auth-switch">
+                Already have an account? <a href="#" id="switch-to-login">Login</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- First-Time User Page -->
+    <div id="first-time-container" class="auth-container first-time-user">
+        <h2>Welcome, New User!</h2>
+        <p>We're excited to have you join our platform. To get started:</p>
+        <ol>
+            <li>Complete your profile</li>
+            <li>Set up two-factor authentication</li>
+            <li>Explore our features</li>
+        </ol>
+        <button id="start-setup" class="btn">Start Setup</button>
+    </div>
+
+    <script>
+        // Page Navigation
+        document.getElementById('switch-to-signup').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('login-container').classList.remove('active');
+            document.getElementById('signup-container').classList.add('active');
+        });
+
+        document.getElementById('switch-to-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('signup-container').classList.remove('active');
+            document.getElementById('login-container').classList.add('active');
+        });
+
+        // Form Validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        // Login Form Validation
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            const email = document.getElementById('login-email');
+            const password = document.getElementById('login-password');
+            const emailError = document.getElementById('login-email-error');
+            const passwordError = document.getElementById('login-password-error');
+
+            // Reset previous errors
+            email.classList.remove('error');
+            password.classList.remove('error');
+            emailError.style.display = 'none';
+            passwordError.style.display = 'none';
+
+            // Validate email
+            if (!validateEmail(email.value)) {
+                email.classList.add('error');
+                emailError.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate password
+            if (password.value.trim() === '') {
+                password.classList.add('error');
+                passwordError.style.display = 'block';
+                isValid = false;
+            }
+
+            // If all validations pass
+            if (isValid) {
+                document.getElementById('login-container').classList.remove('active');
+                document.getElementById('first-time-container').classList.add('active');
+            }
+        });
+
+        // Signup Form Validation
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            const name = document.getElementById('signup-name');
+            const email = document.getElementById('signup-email');
+            const password = document.getElementById('signup-password');
+            const confirmPassword = document.getElementById('confirm-password');
+            const nameError = document.getElementById('signup-name-error');
+            const emailError = document.getElementById('signup-email-error');
+            const passwordError = document.getElementById('signup-password-error');
+            const confirmPasswordError = document.getElementById('confirm-password-error');
+
+            // Reset previous errors
+            [name, email, password, confirmPassword].forEach(input => input.classList.remove('error'));
+            [nameError, emailError, passwordError, confirmPasswordError].forEach(error => error.style.display = 'none');
+
+            // Validate name
+            if (name.value.trim() === '') {
+                name.classList.add('error');
+                nameError.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate email
+            if (!validateEmail(email.value)) {
+                email.classList.add('error');
+                emailError.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate password
+            if (password.value.length < 8) {
+                password.classList.add('error');
+                passwordError.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate confirm password
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.classList.add('error');
+                confirmPasswordError.style.display = 'block';
+                isValid = false;
+            }
+
+            // If all validations pass
+            if (isValid) {
+                document.getElementById('signup-container').classList.remove('active');
+                document.getElementById('first-time-container').classList.add('active');
+            }
+        });
+
+        // First-Time Setup
+        document.getElementById('start-setup').addEventListener('click', function() {
+            alert('User setup initiated! Redirecting to profile completion...');
+            // In a real app, this would redirect to a profile setup page
+        });
+    </script>
+</body>
+</html>

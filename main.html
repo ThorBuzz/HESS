@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HESA</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="main-styles.css">
+  <link rel="stylesheet" href="main.js">
+  <link rel="stylesheet" href="blogsite.css">
+</head>
+<body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="#" class="nav-img">
+          <img src="img/0Q9HfpsG_400x400.jpg" alt="#" class="nav-img">
+        </a>
+
+        <nav class="nav">
+          <ul>
+            <li class="nav-item">
+              <a href="LandingPage.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="blogsite.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="potw.html" class="nav-link">Personality</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Sports</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Gallery</a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      </div>
+
+      
+
+
+
+    </header>
+
+
+    <section class="carousel">
+      <div class="carousel-track">
+          <div class="carousel-slide active">
+              <img src="img/mini_magick20241114-37828-1wrs2f.jpg" alt="Health Talk Event" class="carousel-image">
+              <div class="carousel-content">
+                  <h2 class="carousel-title">Healthcare Symposium 2025</h2>
+                  <p class="carousel-description">Join us for an insightful session with leading medical professionals from City General Hospital.</p>
+                  <a href="#register" class="carousel-button">Register Now</a>
+              </div>
+          </div>
+
+          <div class="carousel-slide">
+              <img src="img/mini_magick20241114-37828-hwyx5n.jpg" alt="Student Elections" class="carousel-image">
+              <div class="carousel-content">
+                  <h2 class="carousel-title">Campus Elections 2025</h2>
+                  <p class="carousel-description">Shape the future of our campus. Vote for your representatives.</p>
+                  <a href="#vote" class="carousel-button">Learn More</a>
+              </div>
+          </div>
+
+          <div class="carousel-slide">
+              <img src="img/mini_magick20241114-37828-5nhbbd.jpg" alt="Sports Tournament" class="carousel-image">
+              <div class="carousel-content">
+                  <h2 class="carousel-title">Inter-Faculty Sports Week</h2>
+                  <p class="carousel-description">Experience the thrill of competition at our annual sports championship.</p>
+                  <a href="#sports" class="carousel-button">View Schedule</a>
+              </div>
+          </div>
+      </div>
+
+      <button class="carousel-control carousel-prev">
+        <i class="arrow arrow-left"></i>
+    </button>
+    <button class="carousel-control carousel-next">
+        <i class="arrow arrow-right"></i>
+    </button>
+    <div class="carousel-indicators"></div>
+  </section>
+
+
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="section-nav" id="sectionNav"></div>
+
+    <section class="awareness-section" id="awareness">
+        <h2 class="section-title">Health Awareness Programs</h2>
+        <div class="awareness-grid">
+            <div class="awareness-card">
+                <div class="awareness-image">
+                    <img src="/api/placeholder/400/320" alt="Health Program 1">
+                </div>
+                <div class="awareness-content">
+                    <h3>Health Program 1</h3>
+                    <p>Comprehensive health awareness and prevention strategies.</p>
+                </div>
+            </div>
+
+            <div class="awareness-card">
+                <div class="awareness-image">
+                    <img src="/api/placeholder/400/320" alt="Health Program 2">
+                </div>
+                <div class="awareness-content">
+                    <h3>Health Program 2</h3>
+                    <p>Advanced healthcare initiatives and community support.</p>
+                </div>
+            </div>
+
+            <div class="awareness-card">
+                <div class="awareness-image">
+                    <img src="/api/placeholder/400/320" alt="Health Program 3">
+                </div>
+                <div class="awareness-content">
+                    <h3>Health Program 3</h3>
+                    <p>Innovative approaches to healthcare and wellness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="entertainment-section" id="entertainment">
+        <h2 class="section-title" style="color: white;">Entertainment Updates</h2>
+        <div class="entertainment-grid">
+            <div class="entertainment-card">
+                <h3>Event 1</h3>
+                <p>Experience amazing entertainment and activities.</p>
+            </div>
+            
+            <div class="entertainment-card">
+                <h3>Event 2</h3>
+                <p>Join us for exciting performances and shows.</p>
+            </div>
+            
+            <div class="entertainment-card">
+                <h3>Event 3</h3>
+                <p>Discover new entertainment possibilities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="split-section">
+        <div class="split-container">
+            <!-- Image Side -->
+            <div class="image-side fade-in">
+                <img src="img/grad.jpeg" alt="Feature Image">
+            </div>
+            
+            <!-- Content Side -->
+            <div class="content-side fade-in" style="animation-delay: 0.2s">
+                <h2>Personality of the Week</h2>
+                <p>Delve into the life of this week's amazing individual</p>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">★</div>
+                        <div>
+                            <h3>School of Medicine and Dentistry</h3>
+                            <p>4th Year</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div>
+                            <h3>Achimota Secondary High School</h3>
+                            <p>Accra. Ghana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">♥</div>
+                        <div>
+                            <h3>Psalm 100</h3>
+                            <p>The only one better than you, is you</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="potw.html" class="cta-button">Read</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Quick Links Section -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">Research</a></li>
+              <li><a href="#">Student Resources</a></li>
+              <li><a href="#">Faculty Directory</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Clinical Skills Lab</a></li>
+                <li><a href="#">Research Centers</a></li>
+                <li><a href="#">Academic Calendar</a></li>
+                <li><a href="#">Campus Safety</a></li>
+              </ul>
+            </div>
+
+
+            <div class="footer-section">
+              <h3>Contact Us</h3>
+              <ul class="contact-info">
+                <li>📞 (555) 123-4567</li>
+                <li>📧 info@healthscience.edu</li>
+                <li>📍 123 Medical Center Drive<br>Healthcare City, HC 12345</li>
+              </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-section">
+              <h3>Connect With Us</h3>
+              <div class="social-links">
+                <a href="#">📱</a>
+                <a href="#">🐦</a>
+                <a href="#">📷</a>
+                <a href="#">▶️</a>
+              </div>
+              <div class="newsletter">
+                <h4>Stay Updated</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+              <div>
+                © 2024 Health Science College. All rights reserved.
+              </div>
+              <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accessibility</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const indicators = document.querySelector('.carousel-indicators');
+    let currentSlide = 0;
+
+    // Create indicators
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('indicator');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        indicators.appendChild(dot);
+    });
+
+    function updateSlide() {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[currentSlide].classList.add('active');
+        
+        // Update indicators
+        const dots = document.querySelectorAll('.indicator');
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlide();
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Auto advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+    
+      // Scroll progress bar
+      function updateProgressBar() {
+            const scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('progressBar').style.width = scrollProgress + '%';
+        }
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all cards
+        document.querySelectorAll('.awareness-card, .entertainment-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Create navigation dots
+        const sections = document.querySelectorAll('section');
+        const sectionNav = document.getElementById('sectionNav');
+
+        sections.forEach((section, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot';
+            dot.addEventListener('click', () => {
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+            sectionNav.appendChild(dot);
+        });
+
+        // Update active dot and progress bar on scroll
+        window.addEventListener('scroll', () => {
+            updateProgressBar();
+
+            // Update active dot
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            sections.forEach((section, index) => {
+                const dot = document.querySelectorAll('.nav-dot')[index];
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>
+
